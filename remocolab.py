@@ -219,6 +219,8 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
     if hostname == None:
       raise RuntimeError("Failed to get user hostname from cloudflared")
     ssh_common_options += " -oProxyCommand=\"cloudflared access ssh --hostname %h\""
+  else:
+    hostname = "azure-jp"
 
   msg += "---\n"
   if is_VNC:
