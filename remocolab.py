@@ -244,8 +244,8 @@ def _setupSSHDMain(public_key, tunnel, ngrok_region, check_gpu_available, mount_
     tunnel = "argotunnel"
 
   avail_tunnels = {"ngrok", "argotunnel"}
-  if tunnel not in avail_tunnels:
-    raise RuntimeError("tunnel argument must be one of " + str(avail_tunnels))
+  #if tunnel not in avail_tunnels:
+  #  raise RuntimeError("tunnel argument must be one of " + str(avail_tunnels))
 
   if mount_gdrive_to:
     if not pathlib.Path('/content/drive').exists():
